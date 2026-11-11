@@ -1,0 +1,5 @@
+import {NavLink,useNavigate} from 'react-router-dom';
+import {LayoutDashboard,Map,Radio,TriangleAlert,BarChart3,Clock3,FileText,Settings,LogOut} from 'lucide-react';
+import SystemStatus from './SystemStatus';
+const links=[['/dashboard','Overview',LayoutDashboard],['/analytics','Analytics',BarChart3],['/diagnostics','Diagnostics',Radio]];
+export default function Sidebar({mode,socketStatus,alertCount}){const nav=useNavigate();return <aside className="sidebar"><div className="brand"><span className="brand-mark">S</span><div><strong>STRATA<span>SENSE</span></strong><small>MINE MONITORING</small></div></div><nav>{links.map(([to,label,Icon])=><NavLink key={to} to={to} className={({isActive})=>isActive?'active':''}><Icon size={17}/><span>{label}</span>{label==='Alerts'&&alertCount>0&&<em>{alertCount}</em>}</NavLink>)}</nav><div className="sidebar-bottom"><SystemStatus mode={mode} socketStatus={socketStatus}/>{mode==='demo'&&<div className="demo-chip">DEMO / SIMULATION DATA</div>}</div></aside>}

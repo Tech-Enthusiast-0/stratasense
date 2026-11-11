@@ -1,0 +1,1 @@
+export default function LiveIndicator({status='connected',label}){const text=label||(status==='connected'?'BACKEND CONNECTED':status==='reconnecting'||status==='connecting'?'RECONNECTING':'DEMO MODE');return <span className={`live-indicator ${status}`}><i/> {text}</span>}

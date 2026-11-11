@@ -1,0 +1,2 @@
+import RiskBadge from './RiskBadge';
+export default function ZoneRiskCard({zone,onClick}){return <button className="zone-risk" onClick={onClick}><div><strong>{zone.id}</strong><span>{zone.sensorCount} nodes</span></div><RiskBadge risk={zone.status}/><div className="risk-bar"><i className={`fill fill-${zone.status.toLowerCase()}`} style={{width:zone.status==='CRITICAL'?'94%':zone.status==='HIGH'?'76%':zone.status==='WATCH'?'52%':'22%'}}/></div></button>}

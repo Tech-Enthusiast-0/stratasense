@@ -1,0 +1,2 @@
+import {useNavigate} from 'react-router-dom';import ZoneRiskCard from '../components/ZoneRiskCard';
+export default function Zones({data}){const nav=useNavigate();return <div className="page"><div className="page-title"><div><span className="eyebrow">GIS / MONITORING</span><h2>MINE ZONES</h2><p>Zone-wise risk state derived from current telemetry.</p></div></div><div className="zone-grid large">{data.zones.map(z=><ZoneRiskCard key={z.id} zone={z} onClick={()=>nav(`/zones/${z.id}`)}/>)}</div></div>}

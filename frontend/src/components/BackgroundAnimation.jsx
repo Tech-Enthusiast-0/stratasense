@@ -1,0 +1,1 @@
+export default function BackgroundAnimation(){return <div className="bg-animation" aria-hidden="true"><div className="contours"/><div className="scanline"/><div className="tunnel-grid"/><span className="particle p1"/><span className="particle p2"/><span className="particle p3"/></div>}

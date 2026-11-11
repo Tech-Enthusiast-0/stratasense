@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚨 StrataSense (स्ट्रैटा-सेंस)
+# 🚨 StrataSense 
 ### Real-Time IoT Strata Deformation Monitoring & Early Warning Architecture for Underground Mines
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
